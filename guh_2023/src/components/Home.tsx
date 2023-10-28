@@ -1,11 +1,10 @@
-function clicked() {
-  alert("Worked");
-}
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <div>
-      <button onClick={clicked}>Login</button>
+      <button onClick={() => navigate('./done')}>Login</button>
     </div>
   );
 }
