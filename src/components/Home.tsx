@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <div>
       <button onClick={() => navigate('./done')}>Login</button>
+      <p>hello</p>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './components/Home'
 import LoginDone from './components/LoginDone'
 import 'bootstrap/dist/css/bootstrap.css'
+import Game from "./components/game"
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -11,6 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route index element={<Home />} />
         <Route path="/done" element={<LoginDone />} />
+        <Route path="/game" element={<Game />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
