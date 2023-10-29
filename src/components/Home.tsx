@@ -16,6 +16,10 @@ export default function Home() {
         </Button>
       </div>
     </div>
+    <div>
+      <button onClick={() => navigate('./done')}>Login</button>
+      <p>hello</p>
+    </div>
     <div className={styles.carousel}>
     <Carousel data-bs-theme="dark">
       <Carousel.Item className={styles.image} interval={7000}>
@@ -43,6 +47,6 @@ export default function Home() {
       </Carousel.Item>
     </Carousel>
     </div>
-    </>
+  </>
   );
 }

@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard'
 import Stats from './components/Stats'
 import Account from './components/Account'
 import 'bootstrap/dist/css/bootstrap.css'
+import Game from "./components/game"
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -17,6 +18,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="stats" element={<Stats />} />
         <Route path="account" element={<Account />} />
+        <Route path="/done" element={<LoginDone />} />
+        <Route path="/game" element={<Game />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
