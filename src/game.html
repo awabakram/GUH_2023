@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    
+</head>
+<body>
+    <h1 id="questionNumber">Question 1</h1>
+    <div id="num1">1</div>
+    <div id="operation">+</div>
+    <div id="num2">2</div>
+    <input id="guess" type="number">
+    <button id="submit" onclick="checkAnswer()">Submit Answer</button>
+    <div id="answer"></div>
+    <script>
+        function generateMathQuestion() {
+            fetch('/api/generateMathQuestion')
+                .then(response => {
+                    console.log(response);
+                })
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+
+                });
+            // const json = info.json();
+            document.getElementById('num1').innerHTML = 'test';
+            document.getElementById('operation').innerHTML = 'test';
+            document.getElementById('num2').innerHTML = 'test';
+        }
+
+        function checkAnswer() {
+            var info = fetch('/api/checkAnswer');
+        }
+        
+        window.onload = generateMathQuestion();
+    </script>
+</body>
+</html>
