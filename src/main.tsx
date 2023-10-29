@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './components/Home'
 import LoginDone from './components/LoginDone'
+import Dashboard from './components/Dashboard'
+import Stats from './components/Stats'
+import Account from './components/Account'
 import 'bootstrap/dist/css/bootstrap.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -10,7 +13,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/done" element={<LoginDone />} />
+        <Route path="done" element={<LoginDone />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="stats" element={<Stats />} />
+        <Route path="account" element={<Account />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
